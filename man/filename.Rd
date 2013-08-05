@@ -1,0 +1,21 @@
+\name{filename}
+\alias{filename}
+\title{Define a filename from current date.}
+\usage{
+  filename(date = Sys.time())
+}
+\arguments{
+  \item{date}{input a date type}
+}
+\value{
+  character a file name
+}
+\description{
+  Define a filename from current date.
+}
+\examples{
+filename()
+filename(as.Date("20110701",format="\%Y\%m\%d"))
+}
+\keyword{filename}
+

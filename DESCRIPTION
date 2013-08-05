@@ -1,0 +1,15 @@
+Package: chinaWeather
+Type: Package
+Title: a visualized package for china Weather
+Description: a visualized package for china Weather
+Author: Dan Zhang
+Maintainer: Dan Zhang<bsspirit@gmail.com>
+Version: 0.1
+Depends:
+    R (>= 3.0.1)
+License: GPL-2
+LazyData: true
+Date: 2013-08-05
+Collate:
+    'chinaWeather-package.r'
+    'chinaWeather.R'
