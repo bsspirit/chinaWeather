@@ -19,3 +19,4 @@ Collate:
     'chinaWeather.R'
     'getData.R'
     'render.R'
+    'util.R'
