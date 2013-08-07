@@ -15,6 +15,7 @@ getWOEIDByCity<-function(en="beijing",zh=NULL){
   }
   return(WOEID$woeid[which(WOEID$en==en)])
 }
+
 #' Get all of city info
 #'
 #' @param lang input a language

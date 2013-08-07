@@ -11,7 +11,11 @@ Depends:
     R (>= 3.0.0)
 Imports:
     RCurl,
-    XML
+    XML,
+    maps,
+    mapdata,
+    maptools,
+    RColorBrewer
 Suggests:
 License: GPL-2
 Collate:

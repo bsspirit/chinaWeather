@@ -21,14 +21,14 @@ getWeatherFromYahoo<-function(woeid=2151330){
   rising<-as.numeric(sapply(ans, xmlGetAttr, "rising"))
   
   ans<-getNodeSet(doc, "//item/yweather:condition")
-  code<-sapply(ans, xmlGetAttr, "code")
+  code<-as.numeric(sapply(ans, xmlGetAttr, "code"))
   
   ans<-getNodeSet(doc, "//item/yweather:forecast[1]")
   low<-as.numeric(sapply(ans, xmlGetAttr, "low"))
   high<-as.numeric(sapply(ans, xmlGetAttr, "high"))
   
   print(paste(woeid,'==>',low,high,code,humidity,visibility,pressure,rising))
-  return(cbind(low,high,code,humidity,visibility,pressure,rising))
+  return(as.data.frame(cbind(low,high,code,humidity,visibility,pressure,rising)))
 }
 
 #' Get one city weather Data.
@@ -54,14 +54,15 @@ getWeatherByCity<-function(en="beijing",zh=NULL,src="yahoo"){
 
 #' Get all of city weather Data.
 #'
+#' @param lang input a language
 #' @param src input data source
 #' @return data.frame weather data
 #' @keywords weather 
 #' @export
 #' @examples
 #' getWeather()
-getWeather<-function(src="yahoo"){
-  cities<-getCityInfo()
+getWeather<-function(lang="en",src="yahoo"){
+  cities<-getCityInfo(lang)
   wdata<-do.call(rbind, lapply(cities$woeid,getWeatherFromYahoo))
   return(cbind(cities,wdata))
 }
