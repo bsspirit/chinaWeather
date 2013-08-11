@@ -1,1 +1,6 @@
-export(filename)
+export(drawTemperature)
+export(getWOEIDByCity)
+export(getCityInfo)
+export(getWeatherFromYahoo)
+export(getWeatherByCity)
+export(getWeather)
