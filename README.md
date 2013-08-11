@@ -5,3 +5,8 @@ China Weather Project for R
 
     library(devtools)
     install_github("chinaWeather","bsspirit")
+    
+## Run a demo
+
+    library(chinaWeather)
+    drawTemperature(weather20130810)

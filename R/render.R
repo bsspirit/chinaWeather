@@ -9,8 +9,8 @@ loadChinaMap<-function(){
   #library(maps)
   #library(mapdata)
   #library(maptools)
+  #chinaMap<<-readShapePoly('../mapdata/bou2_4p.shp')
   data(chinaMap)
-  chinaMap<<-readShapePoly('../mapdata/bou2_4p.shp')
 }
 
 getColors<-function(temp,breaks){
