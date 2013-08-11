@@ -1,17 +1,3 @@
-#' load China Map data only once.
-#'
-#' @return SpatialPolygonsDataFrame china map
-#' @keywords map 
-#' @export
-#' @examples
-#' loadChinaMap()
-loadChinaMap<-function(){
-  library(maps)
-  library(mapdata)
-  library(maptools)
-  chinaMap<<-readShapePoly('../mapdata/bou2_4p.shp')
-}
-
 getColors<-function(temp,breaks){
   f=function(x,y) ifelse(x %in% y,which(y==x),0)
   colIndex=sapply(chinaMap$ADCODE99,f,WOEID$adcode99)
@@ -50,10 +36,6 @@ drawLegend<-function(breaks,colors){
 }
 
 drawTemperature<-function(data,lang='zh',type='high',date=Sys.time(),output=FALSE,path=''){
-  if(length(which(ls()=="chinaMap"))!=1){
-    loadChinaMap()
-  }
-  
   library("RColorBrewer")
   colors <- c(rev(brewer.pal(9,"Blues")),"#ffffef",brewer.pal(9,"YlOrRd"),"#500000")
   breaks=seq(-36,44,4)
