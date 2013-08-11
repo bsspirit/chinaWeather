@@ -10,3 +10,4 @@ China Weather Project for R
 
     library(chinaWeather)
     drawTemperature(weather20130810)
+    drawTemperature(weather20130810,lang='en')
