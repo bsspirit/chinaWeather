@@ -14,11 +14,9 @@ Imports:
     XML,
     RColorBrewer
 Suggests:
-    
 License: GPL-2
 Collate:
     'chinaWeather-package.r'
-    'chinaWeather.R'
     'getData.R'
     'render.R'
     'util.R'
