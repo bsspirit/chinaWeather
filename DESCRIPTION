@@ -12,6 +12,7 @@ Depends:
 Imports:
     RCurl,
     XML,
+    maptools,
     RColorBrewer
 Suggests:
 License: GPL-2

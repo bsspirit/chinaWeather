@@ -8,8 +8,8 @@
 loadChinaMap<-function(){
   #library(maps)
   #library(mapdata)
-  #library(maptools)
   #chinaMap<<-readShapePoly('../mapdata/bou2_4p.shp')
+  library(maptools)
   data(chinaMap)
 }
 
